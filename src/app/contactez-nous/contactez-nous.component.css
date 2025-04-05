@@ -1,0 +1,220 @@
+.contactez-nous {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    overflow: hidden;
+}
+
+.contactez-nous-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/images/contact-img.png'); 
+    background-size: cover;
+    background-position: center;
+    z-index: -1; 
+}
+
+.contactez-nous-content {
+   
+    z-index: 1;
+}
+
+.contactez-nous-content h1 {
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 36px;
+    letter-spacing: 0%;
+    color: #FFFFFF; 
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 0; 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contactez-nous-content h1 {
+        font-size: 48px;
+        line-height: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contactez-nous-content h1 {
+        font-size: 36px;
+        line-height: 24px;
+    }
+}
+
+/* formulaire de contact */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 90vh;
+}
+
+.contact-info {
+    background: #009E48;
+    color: #FFFFFF;
+    padding: 3rem;
+    height: 100%;
+}
+
+.contact-form {
+    background: #FFFFFF;
+    box-shadow: 0px 4.1px 10.26px 0px #00000040;
+    padding: 3rem;
+    height: 100%;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 58px;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 36px;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    border: 1px solid #FFFFFF;
+    border-radius: 4px;
+    padding: 0.5rem;
+}
+
+.icon-container {
+    background: #F69D25;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.contact-text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 36px;
+    color: #FFFFFF;
+}
+
+.form-title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 1rem;
+}
+
+.form-subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.custom-input {
+    border: 1px solid #0F952D;
+    border-radius: 4px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 100%;
+    padding: 1rem;
+}
+
+.custom-input::placeholder {
+    color: #C4C4C4;
+}
+
+.custom-textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.btn-submit {
+    background: #009E48;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+    padding: 0.8rem 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background: #007a38;
+}
+
+@media (max-width: 992px) {
+    .title {
+        font-size: 36px;
+        line-height: 46px;
+    }
+    
+    .subtitle {
+        font-size: 28px;
+        line-height: 28px;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-info, .contact-form {
+        padding: 1.5rem;
+    }
+    
+    .title {
+        font-size: 28px;
+        line-height: 38px;
+    }
+    
+    .subtitle {
+        font-size: 22px;
+        line-height: 22px;
+    }
+    
+    .contact-text {
+        font-size: 16px;
+        line-height: 28px;
+    }
+    
+    .form-title {
+        font-size: 20px;
+    }
+    
+    .form-subtitle {
+        font-size: 14px;
+    }
+}

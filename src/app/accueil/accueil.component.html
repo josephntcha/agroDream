@@ -1,31 +1,72 @@
 <div>
     <!-- Section 1: Landpage -->
     <div class="landpage">
-      <div class="container-fluid">
-        <header class="mt-5 pt-5">
-          <h1>ENSEMBLE SENSIBILISONS AUX<br>PRATIQUES AGRICOLES DURABLES</h1>
-        </header>
-  
-        <div class="separator"></div>
-  
-        <section class="mb-4">
-          <h2>AgroDream Solution TCM</h2>
-          <p>Avançons vers une agriculture responsable pour garantir un avenir alimentaire sûr</p>
-        </section>
-  
-        <div class="dots-container">
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
+      <div class="slideshow-container">
+        <!-- Slide 1 -->
+        <div class="slide active">
+          <div class="slide-background" style="background-image: url('/assets/images/accueil1.jpeg')"></div>
+          <div class="container-fluid">
+            <header class="mt-5 pt-5">
+              <h1>ENSEMBLE SENSIBILISONS AUX<br>PRATIQUES AGRICOLES DURABLES</h1>
+            </header>
+            
+            <div class="separator"></div>
+            
+            <section class="mb-2">
+              <h2>AgroDream Solution TCM</h2>
+              <p>Avançons vers une agriculture responsable pour garantir un avenir alimentaire sûr</p>
+            </section>
+          </div>
         </div>
+        
+        <!-- Slide 2 -->
+        <div class="slide">
+          <div class="slide-background" style="background-image: url('/assets/images/charbon-eco.jpeg')"></div>
+          <div class="container-fluid">
+            <header class="mt-5 pt-5">
+              <h1>INNOVATION ET DURABILITÉ<br>ENERGIE PROPRE ET DEVELOPPEMENT DURABLE</h1>
+            </header>
+            
+            <div class="separator"></div>
+            
+            <section class="mb-2">
+              <h2>AgroDream Vision 2030</h2>
+              <p>Transition du charbon de bois vers le charbon vert pour éviter la déforestation</p>
+            </section>
+          </div>
+        </div>
+        
+        <!-- Slide 3 -->
+        <div class="slide">
+          <div class="slide-background" style="background-image: url('/assets/images/gombo.jpeg')"></div>
+          <div class="container-fluid">
+            <header class="mt-5 pt-5">
+              <h1>PRODUIRE PLUS<br>AVEC MOINS D'IMPACT</h1>
+            </header>
+            
+            <div class="separator"></div>
+            
+            <section class="mb-2">
+              <h2>AgroDream Éco-Responsable</h2>
+              <p>Réduire l'empreinte écologique tout en optimisant les rendements agricoles</p>
+            </section>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Indicateurs de navigation (points) en dehors des slides pour qu'ils restent fixes -->
+      <div class="dots-container">
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
       </div>
     </div>
   
+ 
     <!-- Section 2: Bienvenue -->
-    <div class="bienvenue">
+    <div class="bienvenue ">
       <div class="container">
-            <header class="mb-4">
+            <header class="mb-3 mt-5">
             <h1 class="display-4 font-weight-bold bienvenu_h1">BIENVENUE SUR AGRODREAM SOLUTION TCM</h1>
             </header>
     
@@ -46,4 +87,187 @@
             </div>
       </div>
     </div>
+
+    <!-- Section 3: Notre Entreprise -->
+  <div class="notre-entreprise">
+    <div class="container">
+      <header class="mb-1">
+        <h1 class="entreprise_h1">NOTRE ENTREPRISE</h1>
+      </header>
+      <div class="row mt-1">
+        <div class="col-6 mt-0 mt-sm-1 mt-md-0">
+          <section class="mb-0">
+            <h2 class="entreprise_h2">Engagés pour un Avenir Agricole Durable et Innovant</h2>
+            <p class="entreprise_p">AgroDream Solution TCM est une entreprise engagée dans la promotion de pratiques durables en agriculture, élevage et pisciculture. Nous accompagnons les agriculteurs et les jeunes à travers des formations spécialisées, un suivi personnalisé et des solutions innovantes adaptées aux défis du secteur agricole.</p>
+            <button class="entreprise_button mt-0 mt-sm-1 mt-md-2">En savoir plus</button>
+          </section>
+        </div>
+        <div class="col-6">
+          <div class="row">
+            <div class="col-md-6 mb-4">
+              <img src="/assets/images/image(4).png" alt="Image Entreprise 1" class="img-fluid">
+            </div>
+            <div class="col-md-6  mt-0 mt-sm-1 mt-md-5">
+              <img src="/assets/images/image(3).png" alt="Image Entreprise 2" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Section 4: Domaines d’intervention -->
+  <div class="domaines-intervention ">
+    <div class="container py-2">
+      <header class="mb-4">
+        <h1 class="domaines_h1">Domaines d’intervention</h1>
+      </header>
+       <app-domaines></app-domaines>
+    </div>
+  </div>
+
+   <!-- Section 5: Nos statistiques -->
+   <div class="statistiques">
+    <div class="container-fluid text-white py-3 py-md-2">
+      <div class="container">
+        <header class="text-md-left">
+          <h1 class="statistiques_h1 display-4 display-md-3">Nos statistiques</h1>
+          <div class="underline"></div> 
+        </header>
+
+        <h2 class="statistiques_h2  mt-3 h3 h2-md">Ce que nous avons accompli</h2>
+
+        <div class="row mt-md-4">
+          <!-- Carte 1: Agriculteurs accompagnés -->
+          <div class="col-12 col-md-4 mb-4">
+            <div class="card card-agri p-3 p-md-4">
+              <div class="ellipse mb-3"></div>
+              <div class="chiffre">+200</div>
+              <h3 class="statistiques_h3 h5 h4-md">Agriculteurs accompagnés</h3>
+              <p class="statistiques_p small">Nous accompagnons les agriculteurs dans l’adoption de pratiques durables pour améliorer leurs rendements et préserver l’environnement</p>
+            </div>
+          </div>
+
+          <!-- Carte 2: Jeunes formés au leadership -->
+          <div class="col-12 col-md-4 mb-4">
+            <div class="card cardjeune  p-3 p-md-4">
+              <div class="ellipse mb-3"></div>
+              <div class="chiffre text-dark">+300</div>
+              <h3 class="statistiques_h3l">Jeunes formés au leadership</h3>
+              <p class="statistiques_pl">Nous accompagnons les agriculteurs dans l’adoption de pratiques durables pour améliorer leurs rendements et préserver l’environnement</p>
+            </div>
+          </div>
+
+          <!-- Carte 3: Agriculteurs accompagnés -->
+          <div class="col-12 col-md-4 mb-4">
+            <div class="card card-agri p-3 p-md-4">
+              <div class="ellipse mb-3"></div>
+              <div class="chiffre">+200</div>
+              <h3 class="statistiques_h3">Agriculteurs accompagnés</h3>
+              <p class="statistiques_p">Nous accompagnons les agriculteurs dans l’adoption de pratiques durables pour améliorer leurs rendements et préserver l’environnement</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+   <!-- Section 6: Notre mission -->
+   <div class="notre-mission">
+    <div class="container-fluid py-4 mb-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 mt-md-0">
+            <div class="position-relative"> 
+              <div class="col-8 image1_mission">
+                <img src="/assets/images/mission (1).png" alt="Mission 1" class="img-fluid">
+              </div>
+  
+              <div class="col-6 mb-4 image2_mission p-3 position-absolute">
+                <img src="/assets/images/mission (2).png" alt="Mission 2" class="img-fluid">
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-6">
+            <header class="mt-0">
+              <h1 class="mission_h1">Notre mission</h1>
+              <div class="mission_underline"></div> <!-- Trait souligné -->
+            </header>
+            <h2 class="mission_h2">Notre mission est de nourir l’Afrique par ses propres produits locaux</h2>
+            <p class="mission_p">Notre mission est de contribuer à un développement agricole responsable et à l’autonomisation des acteurs du domaine. AgroDream Solution TCM promeut des pratiques durables en agriculture, élevage et pisciculture, tout en soutenant les agriculteurs et les jeunes.</p>
+            <button class="mission_button">En savoir plus</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="notre-vision">
+    <div class="container-fluid py-4">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Colonne 1: Texte -->
+          <div class="col-md-6">
+            <header class="mt-0">
+              <h1 class="vision_h1">Notre vision d’ici 2030</h1>
+              <div class="vision_underline"></div> <!-- Trait souligné -->
+            </header>
+            <h2 class="vision_h2">Nous aspirons à un secteur agricole innovant, durable et inclusif d’ici 2030.</h2>
+            <p class="vision_p">Notre mission est de contribuer à un développement agricole responsable et à l’autonomisation des acteurs du domaine. AgroDream Solution TCM promeut des pratiques durables en agriculture, élevage et pisciculture, tout en soutenant les agriculteurs et les jeunes.</p>
+            <button class="vision_button">En savoir plus</button>
+          </div>
+  
+          <!-- Colonne 2: Images -->
+          <div class="col-md-6 mt-md-3">
+            <div class="row "> 
+              <div class="col-6 mb-4 image2_vision  p-3 mt-md-5">
+                <img src="/assets/images/vision (2).png" alt="Vision 2" class="img-fluid">
+              </div>
+              <div class="col-6 mb-4 image1_vision">
+                <img src="/assets/images/vision (1).png" alt="Vision 1" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="accompagnement mb-5">
+    <div class="container-fluid py-5">
+      <div class="container text-center">
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <h1 class="accompagnement_h1">Besoin d’un accompagnement ?</h1>
+            <p class="accompagnement_p">Rejoignez-nous pour des formations, des conseils et un suivi personnalisé !</p>
+            <button class="accompagnement_button">Contactez-nous</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+<!-- <div class="container-fluid py-5 position-relative mb-2">
+  <div class="container ce-que-nous-faisons">
+    <h1 class="faisons-title">AgroDream Solution TCM</h1>
+    <h2 class="faisons-subtitle">Ce que nous faisons</h2>
+  </div>
+
+  <!-- Image --
+  <img src="/assets/images/img-faisons.png" alt="Ce que nous faisons" class="img-fluid w-100">
+
+  <!-- Texte et bouton superposés -
+  <div class="col-10 col-md-6 div-texte offset-md-3 p-4 position-relative">
+    <p class="faisons-text text-center">
+      Nous formons et accompagnons les agriculteurs locaux pour améliorer leurs pratiques. Nous formons et accompagnons les agriculteurs locaux pour améliorer leurs pratiques. Nous formons et accompagnons les agriculteurs locaux pour améliorer leurs pratiques.
+    </p>
+    <button class="faisons-button d-block mx-auto">En savoir plus →</button>
+  </div>
+</div> -->
+
+<app-partenaire></app-partenaire>
+
 </div>

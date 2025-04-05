@@ -1,7 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
 /* Section 1: Landpage */
-.landpage .container-fluid {
+.landpage {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  z-index: 0;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.slide-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slide-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(23, 21, 21, 0.5);
+  z-index: 1;
+}
+
+.slide .container-fluid {
+  position: relative;
+  min-height: 100vh;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  z-index: 2;
+}
+
+.landpage h1 {
+  font-weight: 600;
+  color: #FFFFFF;
+  font-size: 3.5rem;
+  line-height: 1.3;
+}
+
+.landpage h2 {
+  font-weight: 600;
+  color: #FFFFFF;
+  font-size: 2rem;
+}
+
+.landpage p {
+  font-weight: 400;
+  color: #FFFFFF;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.landpage .separator {
+  width: 25%;
+  min-width: 150px;
+  border-top: 6px solid #FF5B03;
+  margin: 2rem auto;
+}
+
+.dots-container {
+  position: absolute;
+  bottom: 95px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  margin: 0 8px;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dot.active {
+  opacity: 1;
+  transform: scale(1.2);
+}
+/* .landpage .container-fluid {
     position: relative;
-    background-image: url('/assets/images/accueil.png');
+    background-image: url('/assets/images/accueil1.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -15,7 +142,7 @@
     padding: 2rem;
   }
   
-  /* Calque sombre avec dégradé */
+  /* Calque sombre avec dégradé 
   .landpage .container-fluid::before {
     content: '';
     position: absolute;
@@ -23,14 +150,14 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
+    /* background: linear-gradient(
       180deg, 
-      rgba(0, 0, 0, 0.425), 
-      rgba(0, 0, 0, 0.77) 47%, 
-      rgba(0, 0, 0, 0.77) 71.4%, 
-      rgba(0, 0, 0, 0.77) 83.4%, 
-      rgba(0, 0, 0, 0.77) 100%
-    );
+      rgba(23, 21, 21, 0.425), 
+      rgba(26, 24, 24, 0.77) 47%, 
+      rgba(30, 26, 26, 0.77) 71.4%, 
+      rgba(28, 27, 27, 0.77) 83.4%, 
+      rgba(24, 23, 23, 0.77) 100%
+    ); 
     z-index: 1;
   }
   
@@ -40,7 +167,7 @@
   }
   
   .landpage h1 {
-    font-family: 'Poppins', sans-serif;
+
     font-weight: 600;
     color: #FFFFFF;
     font-size: 3.5rem;
@@ -48,14 +175,14 @@
   }
   
   .landpage h2 {
-    font-family: 'Poppins', sans-serif;
+
     font-weight: 600;
     color: #FFFFFF;
     font-size: 2rem;
   }
   
   .landpage p {
-    font-family: 'Poppins', sans-serif;
+
     font-weight: 400;
     color: #FFFFFF;
     font-size: 1.25rem;
@@ -82,18 +209,18 @@
     justify-content: center;
     margin-top: 2rem;
   }
-  
+   */
   /* Section 2: Bienvenue */
   .bienvenue {
     background-color: #FFFFFF; /* Fond blanc pour la section Bienvenue */
     justify-content: center;
     align-items: center;
-    text-align: center;
-    padding: 4rem 0;
+    text-align: center; 
+    padding: 0rem 0;
   }
   
   .bienvenue .bienvenu_h1 {
-    font-family: 'Poppins', sans-serif;
+
     font-weight: 600;
     font-size: 48px;
     line-height: 40px;
@@ -101,7 +228,7 @@
   }
   
   .bienvenue .bienvenu_p {
-    font-family: 'Poppins', sans-serif;
+
     font-weight: 600;
     font-size: 29px;
     line-height: 50px;
@@ -199,3 +326,880 @@
       line-height: 30px;
     }
   }
+
+
+  
+/* Section 3: Notre Entreprise */
+.notre-entreprise {
+  background-color: #FFFFFF; /* Fond blanc pour la section */
+  padding: 4rem 0;
+}
+
+.notre-entreprise .entreprise_h1 {
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 45px;
+  color: #009E48;
+}
+
+.notre-entreprise .entreprise_h2 {
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 45px;
+  letter-spacing: 2%;
+  color: #000000;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.notre-entreprise .entreprise_p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 38px;
+  color: rgba(0, 0, 0, 0.7); /* #000000B2 avec opacité */
+  text-align: justify;
+  margin-bottom: 0rem;
+}
+
+.notre-entreprise .entreprise_button {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 45px;
+  color: #FFFFFF;
+  background-color: #009E48;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+ 
+}
+
+.notre-entreprise .entreprise_button:hover{
+  color: #009E48;
+  background-color: #FFFFFF; 
+  border: 2px dotted;
+
+}
+
+.notre-entreprise .entreprise_button::after {
+  content: '→';
+  margin-left: 0.5rem;
+}
+
+.notre-entreprise .img-fluid {
+  border-radius: 10px; /* Optionnel: pour arrondir les coins des images */
+}
+
+/* Media queries pour la responsive */
+@media (max-width: 992px) {
+  .notre-entreprise .entreprise_h1 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .notre-entreprise .entreprise_h2 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  .notre-entreprise .entreprise_p {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .notre-entreprise .entreprise_button {
+    font-size: 18px;
+    line-height: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .notre-entreprise .entreprise_h1 {
+    font-size: 28px;
+    line-height: 35px;
+  }
+
+  .notre-entreprise .entreprise_h2 {
+    font-size: 24px;
+    line-height: 35px;
+  }
+
+  .notre-entreprise .entreprise_p {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .notre-entreprise .entreprise_button {
+    font-size: 16px;
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .notre-entreprise .entreprise_h1 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .notre-entreprise .entreprise_h2 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .notre-entreprise .entreprise_p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .notre-entreprise .entreprise_button {
+    font-size: 14px;
+    line-height: 25px;
+  }
+}
+
+
+
+/* Section 4: Domaines d’intervention */
+.domaines-intervention {
+  background-color: #FFFFFF; /* Fond blanc pour la section */
+  padding: 0rem 0;
+}
+
+.domaines-intervention .domaines_h1 {
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 50px;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+
+
+/* Media queries pour la responsive */
+@media (max-width: 992px) {
+  .domaines-intervention .domaines_h1 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .domaines-intervention .domaines_h1 {
+    font-size: 28px;
+    line-height: 35px;
+  }
+
+}
+
+@media (max-width: 576px) {
+  .domaines-intervention .domaines_h1 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+}
+
+
+/* Section 5: Nos statistiques */
+.statistiques .statistiques_h1 {
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 50px;
+  color: #009E48;
+}
+
+.statistiques .underline {
+  width: 100px;
+  height: 6px;
+  background-color: #009E48;
+  margin: 1rem auto 1rem 0; /* Ajuster la marge */
+}
+
+.statistiques .statistiques_h2 {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 50px;
+  color: #000000;
+}
+
+.statistiques .card {
+  border-radius: 10px;
+  padding: 1.5rem;
+  height: 100%; /* Assurer que les cartes ont la même hauteur */
+}
+
+.card-agri {
+  background: #000000;
+}
+
+.cardjeune {
+  background: #FFFFFF;
+  box-shadow: 0px 4.1px 10.6px 0px #00000026;
+}
+
+.statistiques .ellipse {
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 50px;
+  color: #FFFFFF;
+  background-color: #FF5B03;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+}
+
+.statistiques .chiffre {
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 50px;
+  color: #FFFFFF;
+}
+
+.statistiques .statistiques_h3 {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 50px;
+  color: #FFFFFF;
+
+}
+
+.statistiques .statistiques_h3l {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 50px;
+  color: #000000;
+
+}
+
+.statistiques .statistiques_p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #FFFFFF;
+ 
+}
+
+.statistiques .statistiques_pl {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #000000;
+}
+
+/* Media queries pour la responsive */
+@media (max-width: 992px) {
+  .statistiques .statistiques_h1 {
+    font-size: 36px;
+  }
+
+  .statistiques .statistiques_h2 {
+    font-size: 32px;
+  }
+
+  .statistiques .ellipse {
+    font-size: 36px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .statistiques .statistiques_h3,
+  .statistiques .statistiques_h3l {
+    font-size: 20px;
+  }
+
+  .statistiques .statistiques_p,
+  .statistiques .statistiques_pl {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .statistiques .statistiques_h1 {
+    font-size: 28px;
+  }
+
+  .statistiques .statistiques_h2 {
+    font-size: 24px;
+  }
+
+  .statistiques .ellipse {
+    font-size: 28px;
+    width: 70px;
+    height: 70px;
+  }
+
+  .statistiques .statistiques_h3,
+  .statistiques .statistiques_h3l {
+    font-size: 18px;
+  }
+
+  .statistiques .statistiques_p,
+  .statistiques .statistiques_pl {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .statistiques .statistiques_h1 {
+    font-size: 24px;
+  }
+
+  .statistiques .statistiques_h2 {
+    font-size: 20px;
+  }
+
+  .statistiques .ellipse {
+    font-size: 24px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .statistiques .statistiques_h3,
+  .statistiques .statistiques_h3l {
+    font-size: 16px;
+  }
+
+  .statistiques .statistiques_p,
+  .statistiques .statistiques_pl {
+    font-size: 12px;
+  }
+}
+
+
+/* Section 6: Notre mission */
+.notre-mission {
+  background-color: #FFFFFF; /* Fond blanc pour la section */
+}
+
+.notre-mission .mission_h1 {
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 50px;
+  color: #009E48;
+}
+
+.notre-mission .image1_mission {
+  z-index: 0; 
+}
+
+.notre-mission .image2_mission {
+  margin-top: -15%;
+  margin-left: 30%;
+  background: #FFFFFF;
+  z-index: 100; 
+}
+
+.notre-mission .mission_underline {
+  width: 100px;
+  height: 6px;
+  background-color: #009E48;
+}
+
+.notre-mission .mission_h2 {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 40px;
+  letter-spacing: 1.5%;
+  color: #000000;
+  margin-bottom: 0.5rem;
+}
+
+.notre-mission .mission_p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 38px;
+  color: rgba(0, 0, 0, 0.7); /* #000000B2 avec opacité */
+  margin-bottom: 2rem;
+}
+
+.notre-mission .mission_button {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 45px;
+  color: #FFFFFF;
+  background-color: #009E48;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.notre-mission .mission_button::after {
+  content: '→';
+  margin-left: 0.5rem; /* Flèche après le texte */
+}
+
+/* Media queries pour la responsive */
+@media (max-width: 992px) {
+  .notre-mission .mission_h1 {
+    font-size: 36px;
+  }
+
+  .notre-mission .mission_h2 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  .notre-mission .mission_p {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .notre-mission .mission_button {
+    font-size: 18px;
+    line-height: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .notre-mission .mission_h1 {
+    font-size: 28px;
+  }
+
+  .notre-mission .mission_h2 {
+    font-size: 24px;
+    line-height: 35px;
+  }
+
+  .notre-mission .mission_p {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .notre-mission .mission_button {
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  /* Ajustement des images pour les écrans mobiles */
+  .notre-mission .image1_mission,
+  .notre-mission .image2_mission {
+    width: 100%; /* Prendre toute la largeur sur mobile */
+    margin-left: 0; /* Réinitialiser la marge */
+    position: static; /* Réinitialiser le positionnement absolu */
+    transform: none; /* Réinitialiser la transformation */
+  }
+
+  .notre-mission .image2_mission {
+    margin-top: 1rem; /* Espacement entre les images */
+  }
+}
+
+@media (max-width: 576px) {
+  .notre-mission .mission_h1 {
+    font-size: 24px;
+  }
+
+  .notre-mission .mission_h2 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .notre-mission .mission_p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .notre-mission .mission_button {
+    font-size: 14px;
+    line-height: 25px;
+  }
+}
+
+
+/* Section 7: Notre vision d’ici 2030 */
+.notre-vision {
+  background-color: #FFFFFF; /* Fond blanc pour la section */
+}
+
+.notre-vision .vision_h1 {
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 45px;
+  color: #009E48;
+}
+
+.notre-vision .vision_underline {
+  width: 100px;
+  height: 6px;
+  background-color: #009E48;
+  margin-bottom: 1rem;
+}
+
+.notre-vision .vision_h2 {
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 45px;
+  letter-spacing: 1%;
+  color: #000000;
+  margin-bottom: 0.5rem;
+}
+
+.notre-vision .vision_p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 38px;
+  color: rgba(0, 0, 0, 0.7); /* #000000B2 avec opacité */
+  margin-bottom: 2rem;
+}
+
+.notre-vision .vision_button {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 45px;
+  color: #FFFFFF;
+  background-color: #009E48;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.notre-vision .vision_button::after {
+  content: '→';
+  margin-left: 0.5rem; /* Flèche après le texte */
+}
+
+.notre-vision .image1_vision {
+  z-index: 0; /* La première image est en dessous */
+}
+
+.notre-vision .image2_vision {
+  background: #FFFFFF;
+  z-index: 100; /* La deuxième image est au-dessus */
+}
+
+/* Media queries pour la responsive */
+@media (max-width: 992px) {
+  .notre-vision .vision_h1 {
+    font-size: 36px;
+  }
+
+  .notre-vision .vision_h2 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  .notre-vision .vision_p {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .notre-vision .vision_button {
+    font-size: 18px;
+    line-height: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .notre-vision .vision_h1 {
+    font-size: 28px;
+  }
+
+  .notre-vision .vision_h2 {
+    font-size: 24px;
+    line-height: 35px;
+  }
+
+  .notre-vision .vision_p {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .notre-vision .vision_button {
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  /* Ajustement des images pour les écrans mobiles */
+  .notre-vision .image1_vision,
+  .notre-vision .image2_vision {
+    width: 100%; /* Prendre toute la largeur sur mobile */
+   
+  }
+
+  .notre-vision .image2_vision {
+    margin-top: 1rem; /* Espacement entre les images */
+  }
+}
+
+@media (max-width: 576px) {
+  .notre-vision .vision_h1 {
+    font-size: 24px;
+  }
+
+  .notre-vision .vision_h2 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .notre-vision .vision_p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .notre-vision .vision_button {
+    font-size: 14px;
+    line-height: 25px;
+  }
+}
+
+
+
+/* Section 8: Besoin d’un accompagnement ? */
+.accompagnement {
+  background-image: url('/assets/images/accompagnement.png'); 
+  background-size: cover; /* Couvrir toute la section */
+  background-position: center; /* Centrer l'image */
+  background-repeat: no-repeat; /* Ne pas répéter l'image */
+  background-color: rgba(11, 81, 43, 0.56); /* Fond semi-transparent (#0B512B8F) */
+  padding: 4rem 0;
+  position: relative; /* Pour superposer le fond semi-transparent */
+}
+
+.accompagnement::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(11, 81, 43, 0.56); /* Fond semi-transparent (#0B512B8F) */
+  z-index: 1; /* Placer le fond au-dessus de l'image */
+}
+
+.accompagnement .container {
+  position: relative; /* Pour placer le contenu au-dessus du fond */
+  z-index: 2; /* Contenu au-dessus du fond semi-transparent */
+}
+
+.accompagnement .accompagnement_h1 {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58px;
+  color: #FFFFFF;
+  margin-bottom: 1.5rem;
+}
+
+.accompagnement .accompagnement_p {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 45px;
+  color: #FFFFFF;
+  margin-bottom: 2rem;
+}
+
+.accompagnement .accompagnement_button {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 45px;
+  border: 1px solid #FFFFFF; /* Bordure blanche */
+  padding: 0.5rem 2rem;
+  border-radius: 5px;
+  background-color: transparent; /* Fond transparent au survol */
+  color: #FFFFFF; /* Texte blanc au survol */
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.accompagnement .accompagnement_button:hover {
+  background-color: #FFFFFF; /* Fond blanc */
+  color: #0B512B; /* Couleur du texte du bouton */
+
+}
+
+/* Media queries pour la responsive */
+@media (max-width: 992px) {
+  .accompagnement .accompagnement_h1 {
+    font-size: 36px;
+    line-height: 48px;
+  }
+
+  .accompagnement .accompagnement_p {
+    font-size: 20px;
+    line-height: 35px;
+  }
+
+  .accompagnement .accompagnement_button {
+    font-size: 20px;
+    line-height: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .accompagnement .accompagnement_h1 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  .accompagnement .accompagnement_p {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .accompagnement .accompagnement_button {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .accompagnement .accompagnement_h1 {
+    font-size: 24px;
+    line-height: 35px;
+  }
+
+  .accompagnement .accompagnement_p {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .accompagnement .accompagnement_button {
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+
+/* Section 9: Ce que nous faisons */
+.ce-que-nous-faisons {
+  background-color: #000000; /* Fond noir */
+  padding: 4rem 0;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.12); /* Ombre */
+}
+
+.faisons-title {
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 36px;
+  color: #FF5B03;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.faisons-subtitle {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 36px;
+  color: #FFFFFF;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.faisons-text {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 45px;
+  color: rgba(0, 0, 0, 0.8); /* #000000CC avec opacité */
+  margin-bottom: 2rem;
+}
+
+.faisons-button {
+  background-color: #009E48;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 45px;
+  color: #FFFFFF;
+  padding: 0.5rem 1.5rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.div-texte {
+  background-color: #FFFFFF; /* Fond blanc */
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.12); /* Ombre */
+  z-index: 1000; /* Placer au-dessus de l'image */
+  margin-top: -6rem; /* Ajuster la position verticale */
+}
+
+.faisons-button:hover {
+  background-color: #007a37; /* Changement de couleur au survol */
+}
+
+/* Media queries pour la responsive */
+@media (max-width: 992px) {
+  .faisons-title {
+    font-size: 42px;
+  }
+
+  .faisons-subtitle {
+    font-size: 36px;
+  }
+
+  .faisons-text {
+    font-size: 18px;
+    line-height: 35px;
+  }
+
+  .faisons-button {
+    font-size: 18px;
+    line-height: 35px;
+  }
+
+  .div-texte {
+    margin-top: -4rem; /* Ajuster la position verticale pour les tablettes */
+  }
+}
+
+@media (max-width: 768px) {
+  .faisons-title {
+    font-size: 36px;
+  }
+
+  .faisons-subtitle {
+    font-size: 28px;
+  }
+
+  .faisons-text {
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  .faisons-button {
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  .div-texte {
+    margin-top: -3rem; /* Ajuster la position verticale pour les mobiles */
+    width: 90%; /* Prendre plus de largeur sur les petits écrans */
+    left: 5%; /* Centrer horizontalement */
+    transform: translateX(-50%); /* Ajuster la position */
+  }
+}
+
+@media (max-width: 576px) {
+  .faisons-title {
+    font-size: 28px;
+  }
+
+  .faisons-subtitle {
+    font-size: 24px;
+  }
+
+  .faisons-text {
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  .faisons-button {
+    font-size: 14px;
+    line-height: 25px;
+  }
+
+  .div-texte {
+    margin-top: -2rem; /* Ajuster la position verticale pour les très petits écrans */
+    width: 100%; /* Prendre toute la largeur */
+    left: 50%; /* Centrer horizontalement */
+    transform: translateX(-50%); /* Ajuster la position */
+  }
+}
+

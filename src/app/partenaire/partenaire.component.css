@@ -1,0 +1,59 @@
+/* Section 10: Nos partenaires */
+.partenaires {
+    .container{
+      background-color: rgba(217, 217, 217, 0.2); /* Fond semi-transparent (#D9D9D933) */
+    padding: 3rem 0;
+  
+    }
+  }
+  
+  .partenaires-title {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 50px;
+    color: #FF5B03;
+    margin-bottom: 1rem;
+  }
+  
+  .partenaires-subtitle {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 50px;
+    color: #000000;
+    margin-bottom: 2rem;
+  }
+  
+  .partenaires img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .partenaires img:hover {
+    transform: scale(1.1); /* Effet de zoom au survol */
+  }
+  
+  /* Media queries pour la responsive */
+  @media (max-width: 992px) {
+    .partenaires-title,
+    .partenaires-subtitle {
+      font-size: 28px;
+      line-height: 40px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .partenaires-title,
+    .partenaires-subtitle {
+      font-size: 24px;
+      line-height: 35px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .partenaires-title,
+    .partenaires-subtitle {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }

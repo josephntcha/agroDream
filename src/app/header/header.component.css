@@ -1,0 +1,46 @@
+
+/* Header */
+.header .navbar-brand img {
+  max-height: 60px; /* Ajuster la hauteur du logo */
+}
+
+.header .nav-link {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 50px;
+  color: #000000 !important; /* Couleur du texte */
+  margin: 0 1rem;
+  transition: color 0.3s ease;
+}
+
+.header .nav-link:hover {
+  color: #009E48 !important; /* Changement de couleur au survol */
+}
+
+/* Media queries pour la responsive */
+@media (max-width: 992px) {
+  .header .nav-link {
+    font-size: 20px;
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header .nav-link {
+    font-size: 18px;
+    line-height: 35px;
+  }
+}
+
+@media (max-width: 576px) {
+  .header .nav-link {
+    font-size: 16px;
+    line-height: 30px;
+  }
+}
+
+.header .nav-link.active {
+  color: #009E48 !important;
+  text-decoration: none;
+}
