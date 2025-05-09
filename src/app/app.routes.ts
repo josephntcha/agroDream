@@ -3,6 +3,7 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { AproposComponent } from './apropos/apropos.component';
 import { ContactezNousComponent } from './contactez-nous/contactez-nous.component';
 import { ServiceComponent } from './service/service.component';
+import { ActualiteComponent } from './actualite/actualite.component';
 
 export const routes: Routes = [
     
@@ -10,4 +11,5 @@ export const routes: Routes = [
     {path:"apropos", component:AproposComponent},
     {path:"contactez-nous", component:ContactezNousComponent},
     {path:"service", component:ServiceComponent},
+    {path: "actualite",component:ActualiteComponent},
 ];

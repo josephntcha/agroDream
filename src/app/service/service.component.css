@@ -382,4 +382,289 @@ body {
     }
 }
 
+
+
+.image-grid {
+    aspect-ratio: 1/1;
+    overflow: hidden;
+}
+
+.grid-image {
+    object-fit: cover;
+    height: 100%;
+}
+
+.vertical-bar2 {
+    width: 8px;
+    height: 79%;
+    background: #FF5B03;
+    z-index: 1;
+}
+
+.horizontal-bar {
+    height: 8px;
+    width: 100%;
+    margin-top: -155px;
+    background: #FF5B03;
+    z-index: 1;
+}
+
+.section-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 45px;
+    letter-spacing: 0%;
+    color: #000000;
+}
+
+.section-description {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 19.5px;
+    line-height: 38px;
+    letter-spacing: 0%;
+    color: #000000;
+}
+
+.more-button {
+    background: #009E48;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 45px;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+    padding: 0 25px;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.more-button:hover {
+    background-color: #008a3e;
+    color: #FFFFFF;
+}
+
+@media (max-width: 992px) {
+    .section-title {
+        font-size: 28px;
+        line-height: 38px;
+    }
+    
+    .section-description {
+        font-size: 18px;
+        line-height: 32px;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 24px;
+        line-height: 34px;
+    }
+    
+    .more-button {
+        font-size: 18px;
+        line-height: 40px;
+    }
+}
   
+/* Section 5: Conseils et astuces */
+.conseils-astuces {
+  font-family: 'Poppins', sans-serif;
+  padding: 50px 0;
+}
+
+.main-title {
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 58px;
+  color: #000000;
+}
+
+/* Suppression de l'espacement par défaut de la grille Bootstrap */
+.row.g-0 {
+  margin-left: -1px;
+  margin-right: -1px;
+}
+
+.conseils-card {
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  margin: 0;
+  padding: 15px;
+  border: none;
+}
+
+
+
+.badge-conseil {
+  position: absolute;
+  bottom: 15px;
+  left: -2px;
+  background: #FFFFFF;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  padding: 5px 15px;
+  border-radius: 4px;
+  color: #000000;
+}
+
+.card-date {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 10px;
+}
+
+.card-title {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 43px;
+  letter-spacing: 2%;
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+.card-text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 33px;
+  letter-spacing: 2%;
+  color: rgba(0, 0, 0, 0.9);
+  margin-bottom: 20px;
+}
+
+.read-more {
+  font-weight: 500;
+  font-size: 18px;
+  color: #28a745;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.read-more:hover {
+  color: #218838;
+  text-decoration: none;
+}
+
+/* Ajustements responsifs */
+@media (max-width: 992px) {
+  .main-title {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  
+  .card-title {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  
+  .card-text {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  
+  .badge-conseil {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  
+  .card-title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  
+  .card-text {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+
+/* CSS */
+
+.pisciculture-section {
+  position: relative;
+  background-image: url('/assets/images/pisculture.png');
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0;
+  font-family: 'Poppins', sans-serif;
+  color: #FFFFFF;
+  min-height: 300px;
+}
+
+.pisciculture-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 158, 72, 0.6); /* #009E48 avec 60% d'opacité */
+  z-index: 1;
+}
+
+.pisciculture-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.pisciculture-section h2 {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 45px;
+  color: #FFFFFF;
+  margin-bottom: 25px;
+}
+
+.pisciculture-section .description {
+  font-weight: 500;
+  font-size: 19.5px;
+  line-height: 40px;
+  color: #FFFFFF;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .pisciculture-section h2 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+  
+  .pisciculture-section .description {
+    font-size: 17px;
+    line-height: 36px;
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 576px) {
+  .pisciculture-section {
+    padding: 60px 0;
+  }
+  
+  .pisciculture-section h2 {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  
+  .pisciculture-section .description {
+    font-size: 16px;
+    line-height: 30px;
+  }
+}
