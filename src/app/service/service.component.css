@@ -668,3 +668,306 @@ body {
     line-height: 30px;
   }
 }
+
+
+
+/* pisciculture.component.scss */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.pisciculture-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.image-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .image-container img {
+  transform: scale(1.05);
+}
+
+.card-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.card-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 45px;
+  letter-spacing: 0;
+  color: #009E48;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 17.5px;
+  line-height: 38px;
+  letter-spacing: 0;
+  color: rgba(0, 0, 0, 0.9);
+  text-align: center;
+}
+
+/* Media Queries pour le Responsive Design */
+@media (max-width: 1200px) {
+  .card-container {
+    justify-content: center;
+  }
+  
+  .card {
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .card-title {
+    font-size: 22px;
+    line-height: 38px;
+  }
+  
+  .card-description {
+    font-size: 16px;
+    line-height: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pisciculture-container {
+    padding: 10px;
+  }
+  
+  .card-content {
+    padding: 15px;
+  }
+  
+  .card-title {
+    font-size: 20px;
+    line-height: 34px;
+  }
+  
+  .card-description {
+    font-size: 15px;
+    line-height: 28px;
+  }
+}
+
+
+
+
+.especes-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.especes-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 45px;
+  letter-spacing: 0;
+  color: #000000;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.especes-description {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 38px;
+  letter-spacing: 0;
+  color: rgba(0, 0, 0, 0.9);
+  max-width: 900px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.poissons-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.poisson-card {
+  position: relative;
+  width: 100%;
+  max-width: 250px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.poisson-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.image-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.poisson-card:hover .image-container img {
+  transform: scale(1.05);
+}
+
+.poisson-label {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000000;
+  padding: 0px;
+  min-width: 100px;
+  text-align: center;
+}
+
+.poisson-label span {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 45px;
+  letter-spacing: 0;
+  color: #FFFFFF;
+  white-space: nowrap;
+}
+
+/* Media Queries pour le Responsive Design */
+@media (max-width: 1200px) {
+  .poissons-grid {
+    gap: 20px;
+  }
+  
+  .poisson-card {
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 992px) {
+  .especes-title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  
+  .especes-description {
+    font-size: 18px;
+    line-height: 34px;
+  }
+}
+
+@media (max-width: 768px) {
+  .poissons-grid {
+    gap: 15px;
+  }
+  
+  .poisson-card {
+    max-width: 45%;
+  }
+  
+  .especes-title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  
+  .especes-description {
+    font-size: 17px;
+    line-height: 30px;
+  }
+  
+  .poisson-label span {
+    font-size: 16px;
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .especes-container {
+    padding: 15px;
+  }
+  
+  .poissons-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .poisson-card {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .especes-title {
+    font-size: 26px;
+    line-height: 32px;
+  }
+  
+  .especes-description {
+    font-size: 16px;
+    line-height: 28px;
+  }
+}

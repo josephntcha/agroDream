@@ -224,5 +224,39 @@
       </div>
     </div>
   </section>
+
+  <div class="pisciculture-container mt-5">
+  <div class="card-container">
+    <div class="card" *ngFor="let card of piscicultureCards">
+      <div class="image-container">
+        <img [src]="card.image" [alt]="card.title">
+      </div>
+      <div class="card-content">
+        <h2 class="card-title">{{ card.title }}</h2>
+        <p class="card-description">{{ card.description }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="especes-container">
+  <h1 class="especes-title">Espèces de poissons élevées</h1>
+  
+  <p class="especes-description">
+    Les espèces de poissons élevées en pisciculture varient selon le climat, les objectifs de production et les conditions d'élevage.
+  </p>
+  
+  <div class="poissons-grid">
+    <div class="poisson-card" *ngFor="let poisson of especesPoissons">
+      <div class="image-container">
+        <img [src]="poisson.image" [alt]="poisson.nom">
+      </div>
+      <div class="poisson-label">
+        <span>{{ poisson.nom }}</span>
+      </div>
+    </div>
+  </div>
+</div>
+
 </div>
    
